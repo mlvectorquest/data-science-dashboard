@@ -166,6 +166,3 @@ cython_debug/
 
 # FastHTML session secret (generated on first run)
 .sesskey
-
-# Claude Code project instructions
-CLAUDE.md
