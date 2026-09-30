@@ -6,6 +6,7 @@ from .query_base import QueryBase
 # (QueryBase already mixes in QueryMixin, so self.query/self.pandas_query
 # are available on Employee without a separate import here)
 
+
 # Define a subclass of QueryBase
 # called Employee
 class Employee(QueryBase):
@@ -13,7 +14,6 @@ class Employee(QueryBase):
     # Set the class attribute `name`
     # to the string "employee"
     name = "employee"
-
 
     # Define a method called `names`
     # that receives no arguments
@@ -33,7 +33,6 @@ class Employee(QueryBase):
             FROM {self.name}
         """)
 
-
     # Define a method called `username`
     # that receives an `id` argument
     # This method should return a list of tuples
@@ -51,7 +50,6 @@ class Employee(QueryBase):
             FROM {self.name}
             WHERE {self.name}.{self.name}_id = {id}
         """)
-
 
     # Below is method with an SQL query
     # This SQL query generates the data needed for

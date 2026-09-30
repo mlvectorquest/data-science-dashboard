@@ -1,6 +1,7 @@
 # Import any dependencies needed to execute sql queries
 from .sql_execution import QueryMixin
 
+
 # Define a class called QueryBase
 # Use inheritance to add methods
 # for querying the employee_events database.
@@ -16,7 +17,6 @@ class QueryBase(QueryMixin):
 
         # Return an empty list
         return []
-
 
     # Define an `event_counts` method
     # that receives an `id` argument
@@ -42,7 +42,6 @@ class QueryBase(QueryMixin):
             GROUP BY event_date
             ORDER BY event_date
         """)
-
 
     # Define a `notes` method that receives an id argument
     # This function should return a pandas dataframe

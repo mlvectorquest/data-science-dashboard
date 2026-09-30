@@ -35,8 +35,7 @@ class QueryMixin:
         return result
 
 
- 
- # Leave this code unchanged
+# Leave this code unchanged
 def query(func):
     """
     Decorator that runs a standard sql execution
@@ -51,5 +50,5 @@ def query(func):
         result = cursor.execute(query_string).fetchall()
         connection.close()
         return result
-    
+
     return run_query

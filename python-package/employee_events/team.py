@@ -5,6 +5,7 @@ from .query_base import QueryBase
 # (QueryBase already mixes in QueryMixin, so self.query/self.pandas_query
 # are available on Team without a separate import here)
 
+
 # Create a subclass of QueryBase
 # called  `Team`
 class Team(QueryBase):
@@ -12,7 +13,6 @@ class Team(QueryBase):
     # Set the class attribute `name`
     # to the string "team"
     name = "team"
-
 
     # Define a `names` method
     # that receives no arguments
@@ -29,7 +29,6 @@ class Team(QueryBase):
             SELECT team_name, {self.name}_id
             FROM {self.name}
         """)
-
 
     # Define a `username` method
     # that receives an ID argument
@@ -48,7 +47,6 @@ class Team(QueryBase):
             FROM {self.name}
             WHERE {self.name}.{self.name}_id = {id}
         """)
-
 
     # Below is method with an SQL query
     # This SQL query generates the data needed for
