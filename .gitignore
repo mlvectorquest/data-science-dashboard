@@ -166,3 +166,6 @@ cython_debug/
 
 # FastHTML session secret (generated on first run)
 .sesskey
+
+# Keep the built python package (required for project submission)
+!python-package/dist/
